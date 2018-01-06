@@ -7,7 +7,8 @@ body {
 
 /** HEADER **/
 #header-nav {
-  background-color: #f6b319;
+  background-color: #95a773;
+  background-image: url("../images/fondo_rosa.jpg");
   border-radius: 0;
   border: 0;
 }
@@ -24,11 +25,11 @@ body {
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
-  color: #557c3e;
+  color: #f2eae7;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 1px 1px 1px #222;
+  text-shadow: 2px 2px 2px #61122f;
   margin-top: 0;
   margin-bottom: 0;
   line-height: .75;
@@ -50,7 +51,8 @@ body {
   margin-top: 10px;
 }
 #nav-list a {
-  color: #951C49;
+  color: #f2eae7;
+  text-shadow: 2px 2px 2px #61122f;
   text-align: center;
 }
 #nav-list a:hover {
@@ -75,6 +77,7 @@ body {
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
+
 }
 .navbar-header button.navbar-toggle {
   clear: both;
@@ -87,7 +90,8 @@ body {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
-  background-color: #222;
+  background-color: #95a773;
+  background-image: url("../images/heart.png");
   border-top: 0;
 }
 .panel-footer div.row {
@@ -233,8 +237,10 @@ h3.menu-item-title {
 /********** Large devices only **********/
 @media (min-width: 1200px) {
   .container .jumbotron {
-    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    background: url('../images/jyl675.png') no-repeat;
     height: 675px;
+    width: 675px;
+    margin-left: 262.5px;
   }
 }
 

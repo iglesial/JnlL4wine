@@ -11,23 +11,20 @@ body {
   background-image: url("../images/fondo_rosa.jpg");
   border-radius: 0;
   border: 0;
+  height: 25%;
 }
 
-#logo-img {
-  background: url('../images/restaurant-logo_large.png') no-repeat;
-  width: 150px;
-  height: 150px;
-  margin: 10px 15px 10px 0;
-}
+
 
 .navbar-brand {
   padding-top: 25px;
+
 }
 .navbar-brand h1 { /* Restaurant name */
   font-family: 'Lora', serif;
   color: #f2eae7;
-  font-size: 1.5em;
-  text-transform: uppercase;
+  font-size: 3em;
+  text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 2px #61122f;
   margin-top: 0;
@@ -37,15 +34,7 @@ body {
 .navbar-brand a:hover, .navbar-brand a:focus {
   text-decoration: none;
 }
-.navbar-brand p { /* Kosher cert */
-  color: #000;
-  text-transform: uppercase;
-  font-size: .7em;
-  margin-top: 15px;
-}
-.navbar-brand p span { /* Star-K */
-  vertical-align: middle;
-}
+
 
 #nav-list {
   margin-top: 10px;
@@ -74,6 +63,9 @@ body {
   text-align: right;
   padding-right: 15px;
 }
+.navbar-header{
+  width: 100%;
+}
 
 .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   border: 1px solid #61122f;
@@ -88,15 +80,25 @@ body {
 /* FOOTER */
 .panel-footer {
   margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
   background-color: #95a773;
-  background-image: url("../images/heart.png");
   border-top: 0;
+  height: 300px;
+}
+.panel-footer div.container {
+  margin-right: 1px;
+  margin-left: 1px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 .panel-footer div.row {
-  margin-bottom: 35px;
+  height: 100%;
+  margin-bottom: 1px;
+  margin-right: 1px;
+  margin-left: 1px;
+
 }
+
 #hours, #address {
   line-height: 2;
 }
@@ -114,6 +116,18 @@ body {
 #testimonials p:nth-child(2) {
   margin-top: 25px;
 }
+
+
+.panel-footer section {
+  height: 280px;
+  text-align: center;
+}
+.vid-bg {
+  margin-bottom: 0; /* margin already exists on the whole row */
+  background-image: url('../images/vid.png');
+}
+
+
 /* END FOOTER */
 
 
@@ -242,7 +256,30 @@ h3.menu-item-title {
     width: 675px;
     margin-left: 262.5px;
   }
+
+  .col-footer-4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 33%;
+    background-image: url('../images/vid.png') no-repeat;
+  }
+
+  .col-ld-footer-center{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 33%;
+  }
+
 }
+
+
+
 
 /********** Medium devices only **********/
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -261,6 +298,16 @@ h3.menu-item-title {
     height: 558px;
   }
   /* End Home Page */
+  .col-md-footer-4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 33%;
+    background: url('../images/vid.png') no-repeat;
+  }
+
 }
 
 /********** Small devices only **********/
@@ -318,15 +365,10 @@ h3.menu-item-title {
   /* End Header */
 
   /* Footer */
-  .panel-footer section {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .panel-footer section:nth-child(3) {
-    margin-bottom: 0; /* margin already exists on the whole row */
-  }
+
+
   .panel-footer section hr {
-    width: 50%;
+    width: 33%;
   }
   /* End Footer */
 
@@ -375,4 +417,6 @@ h3.menu-item-title {
     float: left;
     width: 100%;
   }
+
+
 }

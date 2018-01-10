@@ -23,10 +23,6 @@ var menuItemsUrl =
 var menuItemsTitleHtml = "snippets/menu-items-title.html";
 var menuItemHtml = "snippets/menu-item.html";
 
-var informationHtml =  "snippets/information.html";
-
-var buttonList = ["#navHomeButton","#navMenuButton","#navInfoButton","#naGiftsButton"]; //"#navGuestsButton"
-
 // Convenience function for inserting innerHTML for 'select'
 var insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);
@@ -52,36 +48,17 @@ var insertProperty = function (string, propName, propValue) {
 // Remove the class 'active' from home and switch to Menu button
 var switchMenuToActive = function () {
   // Remove 'active' from home button
-  setButtonInactive("#navHomeButton")
-  // var classes = document.querySelector("#navHomeButton").className;
-  // classes = classes.replace(new RegExp("active", "g"), "");
-  // document.querySelector("#navHomeButton").className = classes;
+  var classes = document.querySelector("#navHomeButton").className;
+  classes = classes.replace(new RegExp("active", "g"), "");
+  document.querySelector("#navHomeButton").className = classes;
 
   // Add 'active' to menu button if not already there
-  setButtonActive("#navMenuButton");
-  // classes = document.querySelector("#navMenuButton").className;
-  // if (classes.indexOf("active") === -1) {
-  //   classes += " active";
-  //   document.querySelector("#navMenuButton").className = classes;
-  // }
-};
-
-var setButtonInactive = function(whichButton){
-  var classes = document.querySelector(whichButton).className;
-  classes = classes.replace(new RegExp("active", "g"), "");
-  document.querySelector(whichButton).className = classes;
-
-};
-
-var setButtonActive =function(whichButton){
-  // Add 'active' to  button if not already there
-  var classes = document.querySelector(whichButton).className;
+  classes = document.querySelector("#navMenuButton").className;
   if (classes.indexOf("active") === -1) {
     classes += " active";
-    document.querySelector(whichButton).className = classes;
+    document.querySelector("#navMenuButton").className = classes;
   }
 };
-
 
 // On page load (before images or CSS)
 document.addEventListener("DOMContentLoaded", function (event) {
@@ -207,26 +184,6 @@ function buildAndShowCategoriesHTML (categories) {
     },
     false);
 }
-
-
-
-dc.loadInformation = function () {
-  showLoading("#main-content");
-  loadAndShowHTML(informationHtml);
-};
-
-//Loads  snippet
-function loadAndShowHTML (urlHtml) {
-  // Load title snippet of categories page
-  $ajaxUtils.sendGetRequest(
-    urlHtml,
-    function (urlHtml) {
-
-      insertHtml("#main-content", urlHtml);
-    },
-    false);
-}
-
 
 
 // Using categories data and snippets html
